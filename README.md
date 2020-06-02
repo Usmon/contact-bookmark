@@ -9,7 +9,7 @@
 
 # Laravel
 
-##Installation
+<h3>Installation<h3>
 <ol>
     <li>Console: git clone: https://github.com/Usmon/contact-bookmark.git</li>
     <li>Console: cd contact-bookmark</li>
