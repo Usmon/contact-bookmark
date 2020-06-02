@@ -15,10 +15,10 @@
                     @endif
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{route('home')}}">Contacts</a>
+                            <a class="nav-link" href="{{route('home')}}">Contacts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('bookmark')}}">Bookmark</a>
+                            <a class="nav-link active" href="{{route('bookmark')}}">Bookmark</a>
                         </li>
                     </ul>
                     <table class="table table-striped table-bordered">
@@ -33,13 +33,9 @@
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->phone}}</td>
                                 <td class="text-center">
-                                    @if($item->bookmark) 
-                                        <a onclick="return confirm('Are you sure removed this item from Bookmark?');" 
+                                    <a onclick="return confirm('Are you sure removed this item from Bookmark?');" 
                                            class="btn btn-sm btn-danger" 
                                            href="{{route('toggle', $item->id)}}">Remove</a>
-                                    @else
-                                        <a class="btn btn-sm btn-primary" href="{{route('toggle', $item->id)}}">Bookmark</a>
-                                    @endif
                                 </td>
                             </tr>
                             @endforeach

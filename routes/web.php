@@ -20,4 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/bookmark', 'HomeController@bookmark')->name('bookmark');
 Route::get('/toggle/{contact_id}', 'HomeController@toggleBookmark')->name('toggle');
