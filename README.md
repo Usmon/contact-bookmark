@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Laravel
+# Laravel
 
-###Installation
+##Installation
 <ol>
     <li>Console: git clone: https://github.com/Usmon/contact-bookmark.git</li>
     <li>Console: cd contact-bookmark</li>
