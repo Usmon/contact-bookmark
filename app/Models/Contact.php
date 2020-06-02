@@ -18,4 +18,32 @@ class Contact extends Model
         'phone',
         'name'
     ];
+
+    /**
+     * Relation with user
+     * 
+     * @return mixed
+     */
+    public function users()
+    {
+        return $this->belongsToMany('App\User');
+    }
+
+    /**
+     * Check bookmarked with user
+     * 
+     * @return bool
+     */
+    public function getBookmarkAttribute()
+    {
+        try {
+
+            $user_id = auth()->user()->id;
+
+            return $this->users->contains($user_id);
+        }
+        catch (\Exception $e) {
+            return false;
+        }
+    }
 }

@@ -36,4 +36,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Relation with contacts
+     * 
+     * @return mixed
+     */
+    public function contacts()
+    {
+        return $this->belongsToMany('App\Models\Contact');
+    }
 }
